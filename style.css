@@ -3,7 +3,8 @@
     padding: 0;
 }
 body{
-    background-color: #1986ae;
+    /* background-color: #1986ae; */
+    background: linear-gradient(45deg, rgba(249,18,18,1) 0%, rgba(251,15,202,1) 27%, rgba(242,112,5,1) 45%, rgba(207,82,41,1) 59%, rgba(159,91,144,1) 73%, rgba(0,212,255,1) 100%) ;
 
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
