@@ -6,17 +6,27 @@ let counter = 0;
 buttons.forEach(button =>{ 
     button.addEventListener("click", ()=>{ //add eventListener to all buttons
 
-        if(button.innerText == "DECREASE"){
+
+        if(button.textContent == "DECREASE"){
             counter--;
         }
-        else if(button.innerText == "RESET"){
+        else if(button.textContent == "RESET"){
             counter = 0;
         }
         else{
             counter++;
         }
-        counterSpan.innerHTML = counter;
-        counterSpan.style.color = counterColor();
+        counterSpan.textContent = counter;
+        counterSpan.classList.add(counterColor());
+
+        if(counter == 0 || counter == 1 || counter == -1){
+
+            for(clss of counterSpan.classList){
+                 if(clss != counterColor() && clss != "counter"){
+                    counterSpan.classList.remove(clss);
+                }
+            }
+        }
     })
 })
 
@@ -29,7 +39,7 @@ function counterColor(){
         color = "green";
     }
     else{
-        color = "whitesmoke";
+        color = "white";
     }
     return color;
 }
